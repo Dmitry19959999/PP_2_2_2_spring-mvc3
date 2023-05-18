@@ -7,11 +7,13 @@ import web.dao.UserDao;
 import web.model.User;
 
 import java.util.List;
+
 @Service
 
-public class UserServiceImpl implements UserService{
-    private  UserDao userDao;
-@Autowired
+public class UserServiceImpl implements UserService {
+    private final UserDao userDao;
+
+    @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
@@ -37,13 +39,13 @@ public class UserServiceImpl implements UserService{
     @Override
     @Transactional
     public void updateUser(User user) {
-userDao.updateUser(user);
+        userDao.updateUser(user);
     }
 
     @Override
     @Transactional
     public void deleteUser(long id) {
-    userDao.deleteUser(id);
+        userDao.deleteUser(id);
 
     }
 }

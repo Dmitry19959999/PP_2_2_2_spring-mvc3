@@ -17,15 +17,12 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     }
 
 
-
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{
                 WebConfig.class
         };
     }
-
-
 
     @Override
     protected String[] getServletMappings() {
@@ -38,6 +35,6 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
         HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();
-        return new Filter[] {characterEncodingFilter, hiddenHttpMethodFilter};
+        return new Filter[]{characterEncodingFilter, hiddenHttpMethodFilter};
     }
 }
