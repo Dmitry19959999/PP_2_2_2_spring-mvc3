@@ -7,15 +7,12 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import javax.servlet.Filter;
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
-
-
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
                 AppConfig.class
         };
     }
-
 
     @Override
     protected Class<?>[] getServletConfigClasses() {

@@ -16,13 +16,11 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScan(value = "web")
 public class AppConfig {
-
     @Autowired
     private Environment env;
 
